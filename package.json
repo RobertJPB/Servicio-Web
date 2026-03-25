@@ -1,0 +1,15 @@
+{
+  "name": "agenda-service",
+  "version": "1.0.0",
+  "description": "Servicio Web con Express.js para listar y almacenar contactos via www.raydelto.org/agenda.php",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "author": "",
+  "license": "ISC"
+}

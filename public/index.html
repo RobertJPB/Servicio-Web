@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Agenda de Contactos – Tarea 5 Servicio Web con Express.js y Node.js" />
+  <title>Agenda de Contactos | Tarea 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <div class="layout">
+    
+    <!-- Sidebar / Panel izquierdo -->
+    <aside class="sidebar">
+      <div class="brand">
+        <h1 class="brand-title">AGENDA.</h1>
+        <div class="brand-sub">Servicio Web &mdash; Tarea 5</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-label">Registros totales</div>
+        <div class="stat-value" id="totalContactos">--</div>
+        <div class="stat-source">[ fuente: raydelto.org ]</div>
+      </div>
+
+      <!-- Formulario -->
+      <form class="add-form" id="addForm" novalidate>
+        <h2 class="form-title">NUEVO CONTACTO</h2>
+
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" placeholder="Juan" autocomplete="off" />
+        </div>
+        <div class="field">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" placeholder="Pérez" autocomplete="off" />
+        </div>
+        <div class="field">
+          <label for="telefono">Teléfono</label>
+          <input type="text" id="telefono" placeholder="809-555-1234" autocomplete="off" />
+        </div>
+
+        <p id="mensajeError" class="error-msg hidden"></p>
+
+        <button type="submit" id="btnGuardar" class="btn-submit">
+          <span id="btnTexto">Guardar en agenda</span>
+        </button>
+      </form>
+
+      <footer class="sidebar-footer">
+        <div>Autor: Robert Plaza</div>
+        <div>Matrícula: 2024-2174</div>
+      </footer>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main">
+      <header class="main-header">
+        <div class="header-info">
+          <h2>Directorio</h2>
+          <p class="main-sub" id="subtitulo">Cargando datos del servidor...</p>
+        </div>
+        <div class="search-wrap">
+          <input type="search" id="buscar" class="search-input" placeholder="Buscar por texto..." />
+        </div>
+      </header>
+
+      <section id="listaContactos" class="contacts-grid"></section>
+    </main>
+
+  </div>
+
+</body>
+</html>

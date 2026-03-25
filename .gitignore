@@ -1,0 +1,9 @@
+# Dependencias de Node.js – se regeneran con `npm install`
+node_modules/
+
+# Logs
+npm-debug.log*
+*.log
+
+# Variables de entorno (si se usa en el futuro)
+.env
